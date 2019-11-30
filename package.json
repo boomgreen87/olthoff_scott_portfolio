@@ -1,0 +1,36 @@
+{
+  "name": "olthoff_scott_portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Site",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boomgreen87/olthoff_scott_portfolio.git"
+  },
+  "keywords": [
+    "Portfolio"
+  ],
+  "author": "Scott Olthoff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boomgreen87/olthoff_scott_portfolio/issues"
+  },
+  "homepage": "https://github.com/boomgreen87/olthoff_scott_portfolio#readme",
+  "dependencies": {
+    "autoprefixer": "^9.7.3",
+    "cssnano": "^4.1.10",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "hbs": "^4.0.6",
+    "mysql": "^2.17.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
