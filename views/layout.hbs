@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- css stuff -->
-    <!-- link to reset -->
+    <!-- CSS stuff -->
+    <!-- Link to reset -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/main.css">
@@ -17,11 +17,73 @@
 <body>
     <h1 class="hidden">Scott Olthoff</h1>
 
-    <main>
-        {{{ body }}}
-    </main>
+    <div id="container">
+        {{!-- Main Header --}}
+        <header id="mainHeader">
+            <!-- Header Content -->
+            <div id="headerCon">
+                <!--Logo-->
+                {{!-- TODO: FIX HREF AND REMOVE HARD CODED WIDTH --}}
+                <a href="#"><img src="images/logo_v2.svg" alt="Scott Olthoff Logo" class="headerLogo" width="250"></a>
 
-    <script type="module" src="js/main.js"></script>
+                <!-- Menu button -->
+                <div id="menuButton">
+                    <div id="lines">
+                        <div id="line1"></div>
+                        <div id="line2"></div>
+                        <div id="line3"></div>
+                    </div> <!-- End lines -->
+                </div> <!-- End menuButton -->
+            </div> <!-- End headerCon -->
+
+            <!--Main navigation-->
+            <nav id="mainNav">
+                <h2 class="hidden">Main Navigation</h2>
+
+                <ul id="burgerMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul> <!--End burgerMenu-->
+            </nav> <!-- End mainNav-->
+
+            {{!-- Social media links --}}
+            {{!-- TODO: REMOVE FIXED WIDTHS --}}
+            <div class="socialLinks" id="headerSocialLinks">
+                <a href="https://www.facebook.com/scotty.olthoff"><img src="images/facebook_icon_black.svg" alt="Facebook Icon" class="aboutSocialIcon" width="25"></a>
+
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BvqJogRS5QcmMFBSHiCspJg%3D%3D"><img src="images/linkedin_icon_black.svg" alt="LinkedIn Icon" width="25"></a>
+
+                <a href="https://www.youtube.com/channel/UCDP4QaAeURu11unE-IYOuBQ?"> <img src="images/youtube_icon_black.svg" alt="YouTube Icon" width="25"></a>
+            </div> <!-- End headerSocialLinks -->
+        </header> <!-- End mainHeader -->
+
+        {{!-- Page Content --}}
+        <main>
+            {{{ body }}}
+        </main>
+
+        {{!-- Main Footer --}}
+        <footer id="mainFooter">
+            <nav id="footerNav">
+                <h2 class="hidden">Footer Navigation</h2>
+
+                {{!-- Footer menu --}}
+                <ul id="footerMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul> <!-- End footerMenu -->
+            </nav> <!-- End footerNav -->
+
+            {{!-- Back to top button --}}
+            <a href="#" id="backToTop">Back To Top</a>
+        </footer> <!-- End mainFooter -->
+
+        <script type="module" src="js/main.js"></script>
+    </div> <!-- End container -->
 </body>
 
 </html>
