@@ -1,4 +1,4 @@
-![Scott Olthoff Logo](images/readme_logo.jpg)
+![Scott Olthoff Logo](public/images/readme_logo.jpg)
 
 # Portfolio - Scott Olthoff
 
