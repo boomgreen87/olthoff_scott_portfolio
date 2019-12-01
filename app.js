@@ -14,9 +14,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/', require('./routes/index'));
 
 app.use((req, res, next) => {
-    var err = new Error("Page Not Found");
-    err.status = 404;
-    err.customMessage = "Trust me, you DO NOT want to be here.";
+    var err = new Error("-Error 404-");
+    err.customMessage = "You have entered the void";
 
     next(err);
 })
