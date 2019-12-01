@@ -6,15 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/main.css">
     <title>Page Not Found</title>
 </head>
-<body class="errorPage">
 
-    <main class="errorWrapper">
+{{!-- Error Page --}}
+<body id="errorPage">
+    <main id="errorWrapper">
+        {{!-- 404 Animation --}}
+        <img src="images/404_animation.gif" alt="404" id="errorAnimation">
+
+        <div id="errorBody">
         {{{body}}}
+        
+
+        {{!-- Back Button --}}
+        <a href="/" id="backButton">Please take me home</a>
+        </div>
     </main>
 
-    <a href="/" id="backButton">Back</a>
+    <script> </script> <!-- Prevents transitions on page load -->
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

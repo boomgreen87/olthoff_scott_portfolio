@@ -1,6 +1,21 @@
 @import '_vars';
+@import 'modules/_errors';
 
 // Hides all unwanted items
 .hidden {
     display: none;
 }
+
+// Sets up fonts
+h2 {
+    font-family: $titleFont;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+
+h3 {
+    font-family: $secondaryFont;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
