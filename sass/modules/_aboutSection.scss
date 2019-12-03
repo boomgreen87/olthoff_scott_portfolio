@@ -1,0 +1,93 @@
+// Sizes and styles about section
+#aboutSection {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: $brandWhite;
+    background-color: $brandBlack;
+}
+
+// Spaces about h2
+#aboutSection h2 {
+    margin-bottom: 40px;
+}
+
+// Positions picture and lines
+#picArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+// Vertically centers lines
+.picLineArea {
+    display: none;
+    // flex-direction: column;
+    // justify-content: center;
+    width: 100%;
+}
+
+// Sizes and styles lines
+.picLine {
+    background-color: $brandWhite;
+    height: 1px;
+    width: 100%;
+}
+
+// Sizes and styles photo
+#scottPic {
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+// Spaces and sizes social icons
+.aboutSocialIcon {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 40px
+}
+
+// Adds space below social icons
+#aboutSocialLinks {
+    margin-bottom: 20px;
+}
+
+// Adds space around about name
+#aboutName {
+    margin-bottom: 20px;
+    line-height: 28pt;
+}
+
+// Adds space below body text
+.bodyText {
+     margin-bottom: 20px;
+}
+
+
+
+
+// Changes to desktop CSS
+@media screen and (min-width: 1000px) {
+    // Shows lines
+    .picLineArea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    // Repositions photo
+    #scottPic {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    // Resizes social icons
+    .aboutSocialIcon {
+        width: 50px
+    }
+}

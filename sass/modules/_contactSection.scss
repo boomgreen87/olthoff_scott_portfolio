@@ -1,0 +1,101 @@
+// Sizes contact section
+#contactSection {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+// Adds space below contact h2
+#contactSection h2 {
+    margin-bottom: 40px;
+}
+
+// Adds space below contact caption
+#contactCaption {
+    margin-bottom: 20px;
+}
+
+// Sizes and positions contact form
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+// Sizes and styles contact labels
+#contactForm label {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+// Sizes and styles contact inputs
+#contactForm input, #contactForm textArea {
+    height: 15px;
+    background-color: #fcfcfc;
+    text-transform: uppercase;
+    border: 1px solid $brandBlack;
+    padding: 10px;
+    font-size: 7pt;
+    letter-spacing: 0.2em;
+    line-height: 10pt;
+    font-family: $secondaryFont;
+}
+
+// Sizes contact message area
+#contactForm textArea {
+    height: 200px;
+}
+
+// Sizes and positions name inputs
+#contactNameInput {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+// Sizes and positions name inputs
+#contactNameInput input {
+    width: 49%;
+}
+
+// Adds space between name inputs
+#firstName {
+    margin-right: 10px;
+}
+
+// Styles submit button
+.submit {
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 40px !important;
+    width: 100%;
+    max-width: 400px;
+    transition: 0.25s ease-out;
+    font-size: 7pt;
+    letter-spacing: 0.2em;
+    font-family: $secondaryFont;
+}
+
+// Adds hover to submit button
+.submit:hover {
+    color: $brandRed;
+    border: 1px solid $brandRed !important;
+}
+
+
+
+
+// Changes to desktop CSS
+@media screen and (min-width: 1000px) {
+    // Sizes and styles contact inputs
+    #contactForm input, #contactForm textArea {
+        font-size: 10pt;
+        line-height: 18pt;
+    }
+}

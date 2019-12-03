@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/ScrollToPlugin.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -23,8 +25,9 @@
             <!-- Header Content -->
             <div id="headerCon">
                 <!--Logo-->
-                {{!-- TODO: FIX HREF AND REMOVE HARD CODED WIDTH --}}
-                <a href="/"><img src="images/logo_v2.svg" alt="Scott Olthoff Logo" class="headerLogo" width="250"></a>
+                <div id="headerLogoContainer">
+                <a href="/"><img src="images/logo_v2.svg" alt="Scott Olthoff Logo" id="headerLogo"></a>
+                </div>
 
                 <!-- Menu button -->
                 <div id="menuButton">
@@ -37,26 +40,29 @@
             </div> <!-- End headerCon -->
 
             <!--Main navigation-->
-            <nav id="mainNav">
-                <h2 class="hidden">Main Navigation</h2>
+            <div id="menuBackground"></div>
 
-                <ul id="burgerMenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul> <!--End burgerMenu-->
-            </nav> <!-- End mainNav-->
+            <div id="menuContent">
+                <nav id="mainNav">
+                    <h2 class="hidden">Main Navigation</h2>
 
-            {{!-- Social media links --}}
-            {{!-- TODO: REMOVE FIXED WIDTHS --}}
-            <div class="socialLinks" id="headerSocialLinks">
-                <a href="https://www.facebook.com/scotty.olthoff"><img src="images/facebook_icon_black.svg" alt="Facebook Icon" class="aboutSocialIcon" width="25"></a>
+                    <ul id="menu">
+                        <li><a href="/" class="menuBtn" class="importantText"  id="homeBtn">Home</a></li>
+                        <li><a href="/#portfolioSection" class="menuBtn" class="importantText"  id="portfolioBtn">Portfolio</a></li>
+                        <li><a href="/#aboutSection" class="menuBtn" class="importantText"  id="aboutBtn">About</a></li>
+                        <li><a href="/#contactSection" class="menuBtn" class="importantText"  id="contactBtn">Contact</a></li>
+                    </ul> <!--End menu-->
+                </nav> <!-- End mainNav-->
 
-                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BvqJogRS5QcmMFBSHiCspJg%3D%3D"><img src="images/linkedin_icon_black.svg" alt="LinkedIn Icon" width="25"></a>
+                {{!-- Social media links --}}
+                <div class="socialLinks" id="headerSocialLinks">
+                    <a href="https://www.facebook.com/scotty.olthoff"><img src="images/facebook_icon_white.svg" alt="Facebook Icon" class="headerSocialIcon" id="headerFacebookIcon"></a>
 
-                <a href="https://www.youtube.com/channel/UCDP4QaAeURu11unE-IYOuBQ?"> <img src="images/youtube_icon_black.svg" alt="YouTube Icon" width="25"></a>
-            </div> <!-- End headerSocialLinks -->
+                    <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BvqJogRS5QcmMFBSHiCspJg%3D%3D"><img src="images/linkedin_icon_white.svg" alt="LinkedIn Icon" class="headerSocialIcon" id="headerLinkedinIcon"></a>
+
+                    <a href="https://www.youtube.com/channel/UCDP4QaAeURu11unE-IYOuBQ?"> <img src="images/youtube_icon_white.svg" alt="YouTube Icon" class="headerSocialIcon" id="headerYoutubeIcon"></a>
+                </div> <!-- End headerSocialLinks -->
+            </div> <!-- End menuContent -->
         </header> <!-- End mainHeader -->
 
         {{!-- Page Content --}}
@@ -71,15 +77,15 @@
 
                 {{!-- Footer menu --}}
                 <ul id="footerMenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/" class="menuBtn" class="importantText"  id="homeLnk">Home</a></li>
+                    <li><a href="/#portfolioSection" class="menuBtn" class="importantText"  id="portfolioLnk">Portfolio</a></li>
+                    <li><a href="/#aboutSection" class="menuBtn" class="importantText"  id="aboutLnk">About</a></li>
+                    <li><a href="/#contactSection" class="menuBtn" class="importantText"  id="contactLnk">Contact</a></li>
                 </ul> <!-- End footerMenu -->
             </nav> <!-- End footerNav -->
 
             {{!-- Back to top button --}}
-            <a href="#" id="backToTop">Back To Top</a>
+            <a href="#" class="importantText" id="backToTop">^ Back To Top</a>
         </footer> <!-- End mainFooter -->
 
         <script type="module" src="js/main.js"></script>

@@ -1,0 +1,230 @@
+// Sizes header
+#mainHeader{
+    background-color: teal; // TODO: REMOVE THIS LINE
+    font-family: $secondaryFont;
+    position: fixed;
+    width: 100%;
+}
+
+// Positions header content and styles header
+#headerCon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 15px;
+    height: 40px;
+    background-color: $brandWhite;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+}
+
+// Sizes and positions logo
+#headerLogo {
+	width: 250px;
+}
+
+// Fade in animation
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 100; }
+}
+
+// Fade out animation
+@keyframes fadeOut {
+    0% { opacity: 100; }
+    100% { opacity: 0; }
+}
+
+// Sizes and styles menu overlay background
+#menuBackground {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(175,175,175,0.2);
+    z-index: -2;
+    display: none;
+}
+
+// Fades background in when menu is opened
+#menuBackground.openMenu {
+    display: block;
+    animation: fadeIn 0.25s ease-out;
+}
+
+// Fades background out when menu is closed
+#menuBackground.fadeOut {
+    animation: fadeOut 0.25s ease-out;
+}
+
+// Positions and styles nav
+#menuContent {
+	position: fixed;
+    left: 0%;
+    top: -100%;
+	display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.25s ease-out;
+    background-color: $brandBlack;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    z-index: -1;
+}
+
+// Shows menu when burger menu is pressed
+#menuContent.openMenu {
+    transition: 0.25s ease-out;
+    top: 55px;
+}
+
+// Colours, sizes, and styles nav links
+#mainNav ul li a {
+	display: block;
+	width: 100%;
+	text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    line-height: 14pt;
+    font-size: 15pt;
+    color: white;
+    transition: 0.25s ease-out;
+}
+
+// Adds hovers to menu items for desktop users
+#mainNav ul li a:hover {
+    color: $brandRed;
+}
+
+// Positions social media group
+#headerSocialLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+// Sizes and positions social media icons
+.headerSocialIcon {
+    width: 40px;
+    padding-right: 20px;
+    // filter: brightness(1000);
+}
+
+// Removes padding from last social icon
+#headerYoutubeIcon {
+    padding-right: 0;
+}
+
+// Positions the menu button
+#menuButton {
+	margin-top: -1px;
+}
+
+// Changes cursor on hover for burger menu for desktop users
+#menuButton {
+    cursor: pointer;
+}
+
+// Styles the menu button's lines
+#line1, #line2, #line3 {
+	width: 24px;
+	height: 0px;
+	border-top: 3px solid $brandBlack;
+	margin: 5px;
+	transition: all 0.25s ease;
+}
+
+// Animates line1 when menu is opened
+#line1.openMenu {
+	-webkit-transform: rotate(-45deg) translate(-5px, 6px);
+	-ms-transform: rotate(-45deg) translate(-5px, 6px);
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+// Hides line2 when menu is opened
+#line2.openMenu {
+	opacity: 0;
+}
+
+// Animates line3 when menu is opened
+#line3.openMenu {
+	-webkit-transform: rotate(45deg) translate(-5px, -6px);
+	-ms-transform: rotate(45deg) translate(-5px, -6px);
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+
+// Changes header size
+@media screen and (min-width: 380px) {
+    // Sizes header
+    #headerCon{
+        padding-left: 10%;
+        padding-right: 10%;
+        width: 80%;
+    }
+}
+
+// // Changes to desktop CSS
+// @media screen and (min-width: 1000px) {
+//     // Styles header
+//     #mainHeader {
+//         display: flex;
+//         flex-direction: row;
+//     }
+
+//     // Adjust headerCon for desktop
+//     #headerCon {
+//         background-color: pink;
+//         width: 100%;
+//         display: flex;
+//         flex-direction: row;
+//     }
+
+//     // Hides burger menu
+//     #menuButton {
+//         display: none;
+//     }
+
+//     // Makes mainNav static
+//     #mainNav {
+//         background-color: orange; // TODO: REMOVE THIS LINE
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: right;
+//         position: static;
+//         height: 25px;
+//     }
+
+//     // Displays nav links in a row
+// 	#mainNav ul {
+// 		display: flex;
+// 		flex-direction: row;
+//         justify-content: right;
+//         margin-left: auto;
+//         padding-right: 20px;
+// 	}
+
+// 	// Spaces the nav links
+// 	#mainNav ul li {
+//         padding-right: 20px;
+//     }
+    
+//     // Removes borders, backgrounds and space from nav items
+//     #mainNav ul li a {
+//         border: none;
+//         padding: 0px;
+//         height: 20px;
+//         padding-top: 3px;
+//     }
+
+//     // Removes space from last link
+// 	#mainNav ul li:last-child {
+// 		padding-right: 0;
+// 	}
+// }

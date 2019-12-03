@@ -1,5 +1,5 @@
 {{!-- Hero Video Section --}}
-<section id="heroVideoSection">
+<section id="homeSection">
     <h2 class="hidden">Hero Video</h2>
 
     {{!-- TODO: ADD HERO VIDEO --}}
@@ -10,7 +10,7 @@
     <h2>Portfolio</h2>
 
     {{!-- Portfolio Caption --}}
-    <p id="portfolioCaption">Check out below to see some work I created just for you! Okay, maybe not really, but we can pretend right? If you like what you see, don’t be afraid to contact me through the contact form below! Maybe then I can really make something just for you!</p>
+    <p id="portfolioCaption" class="importantText">Check out below to see some work I created just for you! Okay, maybe not, but we can pretend right? If you like what you see, don’t be afraid to contact me through the contact form below! Maybe then I can really make something just for you!</p>
 
     {{!-- TODO: ADD DEMO REEL --}}
 
@@ -24,53 +24,64 @@
 <section id="aboutSection">
     <h2>About</h2>
 
-    {{!-- Picture of me --}}
-    <img src="images/scott.jpg" alt="Picture of Scott" id="scottPic">
+    {{!-- Pic area --}}
+    <div id="picArea">
+        {{!-- Left pic line --}}
+        <div class="picLineArea"><div class="picLine" id="picLineLeft"></div></div>
+
+        {{!-- Picture of me --}}
+        <img src="images/scott.jpg" alt="Picture of Scott" id="scottPic">
+
+        {{!-- Right pic line --}}
+        <div class ="picLineArea"><div class="picLine" id="picLineRight"></div></div>
+    </div> <!-- End picArea -->
 
     {{!-- Social media links --}}
     {{!-- TODO: REMOVE FIXED WIDTHS --}}
     <div class="socialLinks" id="aboutSocialLinks">
-        <a href="https://www.facebook.com/scotty.olthoff"><img src="images/facebook_icon_white.svg" alt="Facebook Icon" class="aboutSocialIcon" width="55"></a>
+        <a href="https://www.facebook.com/scotty.olthoff"><img src="images/facebook_icon_white.svg" alt="Facebook Icon" class="aboutSocialIcon" id="aboutFacebookIcon" width="55"></a>
 
-        <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BvqJogRS5QcmMFBSHiCspJg%3D%3D"><img src="images/linkedin_icon_white.svg" alt="LinkedIn Icon" width="55"></a>
+        <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BvqJogRS5QcmMFBSHiCspJg%3D%3D"><img src="images/linkedin_icon_white.svg" alt="LinkedIn Icon" class="aboutSocialIcon" id="aboutLinkedinIcon" width="55"></a>
 
-        <a href="https://www.youtube.com/channel/UCDP4QaAeURu11unE-IYOuBQ?"> <img src="images/youtube_icon_white.svg" alt="YouTube Icon" width="55"></a>
+        <a href="https://www.youtube.com/channel/UCDP4QaAeURu11unE-IYOuBQ?"> <img src="images/youtube_icon_white.svg" alt="YouTube Icon" class="aboutSocialIcon" id="aboutYoutubeIcon" width="55"></a>
     </div> <!-- End aboutSocialLinks -->
 
     {{!-- About name --}}
     <h3 id="aboutName">Scott Olthoff</h3>
 
     {{!-- About description --}}
-    <p id="aboutDescription">My name is Scott Olthoff (just in case you didn’t see the big title above). I am a VFX artist and video editor from London, Ontario. I am currently in the Interactive Media Design program at Fanshawe College. When I graduate, I am planning to continue my studies in the Visual Effects and Editing program at Fanshawe to further develop my video skills. My goal is to take any video that is handed to me and make it extraordinary.
+    <div id="aboutDescription" >
+        <p class="bodyText">My name is Scott Olthoff (just in case you didn’t see the big title above). I am a VFX artist and video editor from London, Ontario. I am currently in the Interactive Media Design program at Fanshawe College. When I graduate, I am planning to continue my studies in the Visual Effects and Editing program at Fanshawe to further develop my video skills. My goal is to take any video that is handed to me and make it extraordinary.</p>
 
-    I find video editing and visual effects absolutely fascinating. The stories that you can tell, the emotions you can evoke, the excitement you can create. The fact that we are able to seamlessly blend computer generated images with real footage is mind-boggling. 
+        <p class="bodyText">I find video editing and visual effects absolutely fascinating. The stories that you can tell, the emotions you can evoke, the excitement you can create. The fact that we are able to seamlessly blend computer generated images with real footage is mind-boggling. </p>
 
-    My dream is to one day create films and/or music videos. To be able to help a story or song come to life would make my world. Music videos like A$AP Rocky’s “Kids Turned Out Fine” video, edited by Will Town with VFX by Mathematic, help to keep me inspired. I hope to one day create a video as visually mesmerizing as that one.</p>
+        <p class="bodyText">My dream is to one day create films and/or music videos. To be able to help a story or song come to life would make my world. Music videos like A$AP Rocky’s “Kids Turned Out Fine” video, edited by Will Town with VFX by Mathematic, help to keep me inspired. I hope to one day create a video as visually mesmerizing as that one.</p>
+    </div> <!-- End aboutDescription -->
 </section> <!-- End aboutSection -->
 
 <section id="contactSection">
     <h2>Contact</h2>
 
-    <p id="contactCaption">Please fill out the form below to contact me. I need a better answer for when my parents ask me who I am talking to!</p>
+    <p id="contactCaption" class="importantText">Please fill out the form below to contact me. I need a better answer for when my parents ask me who I am talking to!</p>
 
     <div id="contactForm">
         <!-- Name -->
-        <div id="contactName">
-            <label for="firstName">Name:</label>
+        <label for="firstName">Name</label>
+        <div id="contactNameInput">
             <input id="firstName" type="text" placeholder="First Name" required>
             <input id="lastName" type="text" placeholder="Last Name" required>
         </div> <!-- End contactName -->
 
 		<!-- Email -->
-		<label for="email">Email:</label>
+		<label for="email">Email</label>
 		<input id="email" type="Email" placeholder="creative_example@gmail.com" required>
 
         <!-- Subject -->
-		<label for="subject">Last Name:</label>
+		<label for="subject">Subject</label>
 		<input id="subject" type="text" placeholder="I'd love to work with you!" required>
 
 		<!-- Message -->
-		<label for="message">Message:</label>
+		<label for="message">Message</label>
 		<textarea id="message" cols="50" rows="14" placeholder="I think you know what to do here." required></textarea>
 
 		<!-- Submit Button -->
