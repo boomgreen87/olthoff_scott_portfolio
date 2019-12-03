@@ -1,0 +1,66 @@
+// Sizes and styles footer
+#mainFooter {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: $brandBlack;
+    display: flex;
+    flex-direction: row;
+}
+
+// Adds hover to links
+#mainFooter a:hover {
+    color: $brandRed;
+}
+
+// Hides footer nav
+#footerNav {
+    display: none;
+}
+
+// Positions and styles back to top button
+#backToTop {
+    margin: 0 auto;
+    color: $brandWhite;
+}
+
+
+
+
+// Changes to desktop CSS
+@media screen and (min-width: 1000px) {
+    // Positions footer nav
+    #footerNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+
+    // Displays nav links in a row
+    #footerNav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    // Spaces the nav links
+    #footerNav ul li {
+        padding-right: 20px;
+    }
+
+    // Colours nav links
+    #footerNav ul li a {
+        color: $brandWhite;
+    }
+
+    // Removes space from last link
+    #footerNav ul li:last-child {
+        padding-right: 0;
+    }
+
+    // Positions back to top button
+    #backToTop {
+        margin: 0;
+        margin-left: auto;
+    }
+}

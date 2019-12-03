@@ -17,20 +17,18 @@
 
 // Styles and positions h2
 #errorPage h2 {
-    font-size: 20px;
-    padding-left: 15px;
+    font-size: 15pt;
+    padding-left: 10px;
     margin-bottom: 10px;
     transition: 0.25s ease-out;
-    letter-spacing: 10px;
 }
 
 // Styles and positions h3
 #errorPage h3 {
-    font-size: 14px;
-    letter-spacing: 4px;
     margin-bottom: 60px;
     line-height: 20px;
     transition: 0.25s ease-out;
+    font-size: 10pt;
 }
 
 // Styles and positions back button
@@ -41,8 +39,7 @@
     color: $brandBlack;
     letter-spacing: 4px;
     transition: 0.25s ease-out;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 8pt;
 }
 
 // Adds hover effect to back button
@@ -57,9 +54,7 @@
 // 364px
 @media screen and (min-width: 364px) {
     // Increases h2 letter spacing
-    #errorPage h2 {
-        letter-spacing: 20px;
-    }
+    
 }
 
 // 420px
@@ -71,11 +66,11 @@
 
     // Increases h3 font size
     #errorPage h3 {
-        font-size: 16px;
+        font-size: 12pt;
     }
     
     // Increases back button font size
     #backButton {
-        font-size: 16px;
+        font-size: 10pt;
     }
 }

@@ -1,21 +1,72 @@
 @import '_vars';
 @import 'modules/_errors';
+@import 'modules/_header';
+@import 'modules/_homeSection';
+@import 'modules/_portfolioSection';
+@import 'modules/_aboutSection';
+@import 'modules/_contactSection';
+@import 'modules/_footer';
+
 
 // Hides all unwanted items
 .hidden {
     display: none;
 }
 
-// Sets up fonts
+// Sizes, positions, and styles page
+body {
+    text-align: center;
+    font-family: $secondaryFont;
+    letter-spacing: 0.15em;
+    line-height: 18pt;
+    font-size: 11pt;
+}
+
+// Styles h2s
 h2 {
     font-family: $titleFont;
     text-transform: uppercase;
-    letter-spacing: 20px;
+    letter-spacing: 0.55em;
+    font-size: 20pt;
 }
 
+// Styles h3s
 h3 {
     font-family: $secondaryFont;
     text-transform: uppercase;
-    letter-spacing: 6px;
+    letter-spacing: 0.2em;
+    font-size: 22pt;
 }
 
+// Styles important text
+.importantText, a {
+    font-family: $secondaryFont;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    line-height: 18pt;
+    font-size: 11pt;
+}
+
+// Styles links
+a {
+    text-decoration: none;
+    color: $brandBlack;
+    font-weight: normal;
+    transition: 0.25s ease-out;
+}
+
+// Adds hover to links
+a:hover {
+    color: $brandRed;
+}
+
+
+
+
+// Changes to desktop CSS
+@media screen and (min-width: 1000px) {
+    // Increase h2s' font size
+    h2 {
+        font-size: 25pt;
+    }
+}
