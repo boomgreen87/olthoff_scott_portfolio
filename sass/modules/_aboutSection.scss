@@ -23,8 +23,6 @@
 // Vertically centers lines
 .picLineArea {
     display: none;
-    // flex-direction: column;
-    // justify-content: center;
     width: 100%;
 }
 
@@ -41,7 +39,7 @@
     border-radius: 50%;
     margin-bottom: 20px;
     width: 100%;
-    max-width: 300px;
+    max-width: 220px;
 }
 
 // Spaces and sizes social icons
@@ -49,6 +47,10 @@
     margin-left: 5px;
     margin-right: 5px;
     width: 40px
+}
+
+.aboutSocialIcon:hover {
+    .st0 {fill: $brandRed}
 }
 
 // Adds space below social icons
@@ -80,10 +82,11 @@
         width: 100%;
     }
 
-    // Repositions photo
+    // Repositions and resizes photo
     #scottPic {
         margin-left: 20px;
         margin-right: 20px;
+        max-width: 300px;
     }
 
     // Resizes social icons
