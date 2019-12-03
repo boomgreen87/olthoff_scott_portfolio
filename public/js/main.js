@@ -46,8 +46,6 @@ const myVM = (() => {
     let links = document.querySelectorAll(".menuBtn"),
         targetArea;
 
-    console.log(links);
-
     // Scroll to function
     function scrollLink(e) {
         // Closes menu

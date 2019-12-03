@@ -1,7 +1,6 @@
 // Sizes header
-#mainHeader{
-    background-color: teal; // TODO: REMOVE THIS LINE
-    font-family: $secondaryFont;
+#mainHeader {
+    font-family: $siteFont;
     position: fixed;
     width: 100%;
 }
@@ -98,7 +97,7 @@
 }
 
 // Positions social media group
-#headerSocialLinks {
+#headerWhiteSocialLinks, #headerBlackSocialLinks {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -111,12 +110,27 @@
 .headerSocialIcon {
     width: 40px;
     padding-right: 20px;
-    // filter: brightness(1000);
+}
+
+// Adds hover to social media icons
+.headerSocialIcon:hover {
+    .st0 {fill: $brandRed;}
+    .st1 {fill: $brandRed;} 
+}
+
+// Adds transition to social media icons
+.st0, .st1 {
+    transition: 0.25s ease-out;
 }
 
 // Removes padding from last social icon
-#headerYoutubeIcon {
+#headerWhiteYoutubeIcon, #headerBlackYoutubeIcon {
     padding-right: 0;
+}
+
+// Hides black header social links
+#headerBlackSocialLinks {
+    display: none;
 }
 
 // Positions the menu button
@@ -170,61 +184,96 @@
     }
 }
 
-// // Changes to desktop CSS
-// @media screen and (min-width: 1000px) {
-//     // Styles header
-//     #mainHeader {
-//         display: flex;
-//         flex-direction: row;
-//     }
+// Changes to desktop CSS
+@media screen and (min-width: 1000px) {
+    // Styles header
+    #mainHeader {
+        height: 55px;
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $brandWhite;
+        box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
+    }
 
-//     // Adjust headerCon for desktop
-//     #headerCon {
-//         background-color: pink;
-//         width: 100%;
-//         display: flex;
-//         flex-direction: row;
-//     }
+    // Adjust headerCon for desktop
+    #headerCon {
+        position: static;
+        width: 250px;
+        height: 40px;
+        padding: 0;
+        padding-top: 15px;
+    }
 
-//     // Hides burger menu
-//     #menuButton {
-//         display: none;
-//     }
+    // Hides burger menu
+    #menuButton {
+        display: none;
+    }
 
-//     // Makes mainNav static
-//     #mainNav {
-//         background-color: orange; // TODO: REMOVE THIS LINE
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: right;
-//         position: static;
-//         height: 25px;
-//     }
+    // Hides background if mobile menu is opened and changed to desktop
+    #menuBackground.openMenu {
+        display: none;
+    }
 
-//     // Displays nav links in a row
-// 	#mainNav ul {
-// 		display: flex;
-// 		flex-direction: row;
-//         justify-content: right;
-//         margin-left: auto;
-//         padding-right: 20px;
-// 	}
+    // Positions and styles nav
+    #menuContent {
+        position: static;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        height: 40px;
+        width: 500px;
+        padding-top: 15px;
+        background-color: $brandWhite;
+    }
 
-// 	// Spaces the nav links
-// 	#mainNav ul li {
-//         padding-right: 20px;
-//     }
+    // Changes nav size
+    #mainNav {
+        height: 25px;
+        padding-top: 3px;
+    }
+
+    // Displays nav links in a row
+	#mainNav ul {
+		display: flex;
+		flex-direction: row;
+	}
+
+	// Spaces the nav links
+	#mainNav ul li {
+        padding-right: 20px;
+    }
     
-//     // Removes borders, backgrounds and space from nav items
-//     #mainNav ul li a {
-//         border: none;
-//         padding: 0px;
-//         height: 20px;
-//         padding-top: 3px;
-//     }
+    // Removes borders, backgrounds and space from nav items
+    #mainNav ul li a {
+        border: none;
+        padding: 0px;
+        color: $brandBlack;
+        letter-spacing: 0.2em;
+        line-height: 18pt;
+        font-size: 11pt;
+    }
+    
+    // Positions social media group
+        #headerBlackSocialLinks {
+        display: flex;
+        flex-direction: row;
+        height: 25px;
+        margin: 0;
+    }
 
-//     // Removes space from last link
-// 	#mainNav ul li:last-child {
-// 		padding-right: 0;
-// 	}
-// }
+    // Sizes and positions social media icons
+    .headerSocialIcon {
+        width: 25px;
+        padding-right: 10px;
+    }
+
+    // Hides white header social links
+    #headerWhiteSocialLinks {
+        display: none;
+    }
+}

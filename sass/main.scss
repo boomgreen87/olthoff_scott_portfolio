@@ -16,7 +16,7 @@
 // Sizes, positions, and styles page
 body {
     text-align: center;
-    font-family: $secondaryFont;
+    font-family: $siteFont;
     letter-spacing: 0.15em;
     line-height: 18pt;
     font-size: 11pt;
@@ -24,7 +24,7 @@ body {
 
 // Styles h2s
 h2 {
-    font-family: $titleFont;
+    font-family: $siteFont;
     text-transform: uppercase;
     letter-spacing: 0.55em;
     font-size: 20pt;
@@ -32,7 +32,7 @@ h2 {
 
 // Styles h3s
 h3 {
-    font-family: $secondaryFont;
+    font-family: $siteFont;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 22pt;
@@ -40,7 +40,7 @@ h3 {
 
 // Styles important text
 .importantText, a {
-    font-family: $secondaryFont;
+    font-family: $siteFont;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     line-height: 18pt;
@@ -58,6 +58,11 @@ a {
 // Adds hover to links
 a:hover {
     color: $brandRed;
+}
+
+// Prevents SVGs from being cut off
+svg {
+    overflow: visible;
 }
 
 
