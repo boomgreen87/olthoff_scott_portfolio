@@ -3,7 +3,7 @@
     background-color: $brandWhite;
     color: $brandBlack;
     text-align: center;
-    margin-top: 2%;
+    margin-top: 4%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,17 +51,11 @@
 
 // Breakpoints
 
-// 364px
-@media screen and (min-width: 364px) {
-    // Increases h2 letter spacing
-    
-}
-
 // 420px
 @media screen and (min-width: 420px) {
     // Increases h2 font size
     #errorPage h2 {
-        font-size: 28px;
+        font-size: 22pt;
     }
 
     // Increases h3 font size

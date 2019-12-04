@@ -20,6 +20,7 @@ body {
     letter-spacing: 0.15em;
     line-height: 18pt;
     font-size: 11pt;
+    transition: 0.25 ease-out;
 }
 
 // Styles h2s
@@ -28,6 +29,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 0.55em;
     font-size: 20pt;
+    transition: 0.25s ease-out;
 }
 
 // Styles h3s
@@ -36,6 +38,7 @@ h3 {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 22pt;
+    transition: 0.25s ease-out;
 }
 
 // Styles important text
@@ -45,6 +48,7 @@ h3 {
     letter-spacing: 0.2em;
     line-height: 18pt;
     font-size: 11pt;
+    transition: 0.25s ease-out;
 }
 
 // Styles links
@@ -52,7 +56,6 @@ a {
     text-decoration: none;
     color: $brandBlack;
     font-weight: normal;
-    transition: 0.25s ease-out;
 }
 
 // Adds hover to links

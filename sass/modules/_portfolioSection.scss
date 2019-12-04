@@ -1,12 +1,32 @@
 // Sizes portfolio section
 #portfolioSection {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     padding-left: 10%;
     padding-right: 10%;
 }
 
 // Adds space below portfolio h2
 #portfolioSection h2 {
-    margin-bottom: 40px;;
+    margin-bottom: 60px;
+}
+
+// Adds space below portfolio caption
+#portfolioCaption {
+    margin-bottom: 60px;
+}
+
+// Sizes demo reel div and sets it up to be responsive
+#demoReel {
+    padding-bottom:56.25%;
+    display:block;
+    width: 100%;
+    position:relative;
+}
+
+// Positions the demo reel within the div
+#demoReel iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

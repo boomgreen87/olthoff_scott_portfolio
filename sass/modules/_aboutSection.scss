@@ -1,7 +1,7 @@
 // Sizes and styles about section
 #aboutSection {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     padding-left: 10%;
     padding-right: 10%;
     color: $brandWhite;
@@ -10,7 +10,7 @@
 
 // Spaces about h2
 #aboutSection h2 {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 // Positions picture and lines
@@ -40,6 +40,7 @@
     margin-bottom: 20px;
     width: 100%;
     max-width: 220px;
+    transition: 0.25s ease-out;
 }
 
 // Spaces and sizes social icons
