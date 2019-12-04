@@ -1,14 +1,14 @@
 // Sizes contact section
 #contactSection {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     padding-left: 10%;
     padding-right: 10%;
 }
 
 // Adds space below contact h2
 #contactSection h2 {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 // Adds space below contact caption
@@ -44,6 +44,7 @@
     letter-spacing: 0.2em;
     line-height: 10pt;
     font-family: $siteFont;
+    transition: 0.25s ease-out;
 }
 
 // Sizes contact message area
@@ -73,7 +74,7 @@
 .submit {
     margin: 0 auto;
     margin-top: 40px;
-    height: 40px !important;
+    height: 50px !important;
     width: 100%;
     max-width: 400px;
     transition: 0.25s ease-out;
@@ -86,6 +87,7 @@
 .submit:hover {
     color: $brandRed;
     border: 1px solid $brandRed !important;
+    cursor: pointer;
 }
 
 

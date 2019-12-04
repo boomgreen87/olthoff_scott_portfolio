@@ -3,6 +3,7 @@
     font-family: $siteFont;
     position: fixed;
     width: 100%;
+    z-index: 100;
 }
 
 // Positions header content and styles header
@@ -61,7 +62,7 @@
 #menuContent {
 	position: fixed;
     left: 0%;
-    top: -100%;
+    top: -500px;
 	display: block;
     width: 100%;
     height: auto;
@@ -270,6 +271,13 @@
     .headerSocialIcon {
         width: 25px;
         padding-right: 10px;
+        opacity: 0.8;
+        transition: 0.25s ease-out;
+    }
+
+    // Changes social icon opacity on hover
+    .headerSocialIcon:hover {
+        opacity: 1;
     }
 
     // Hides white header social links
