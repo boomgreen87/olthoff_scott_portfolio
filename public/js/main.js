@@ -105,6 +105,29 @@ const myVM = (() => {
 
 
 
+    // LOADING SCREEN RULES
+
+    // Loading screen variables
+    let loadingScreen = document.querySelector("#loadingScreen");
+
+    // Adds closing class
+    function addClose() {
+        loadingScreen.classList.add("closed");
+    }
+
+    // Close loader function
+    function closeLoader() {
+        loadingScreen.classList.add("animateOut");
+        setTimeout(addClose, 500);
+    }
+
+    // Closes loader when page has loaded
+    window.addEventListener("load", closeLoader);
+
+
+
+
+
     // HOME PAGE RULES
 
     // SCROLL TO RULES
@@ -138,8 +161,6 @@ const myVM = (() => {
 
 // Scrolls to offset when clicking on link on portfolio page
     window.addEventListener("load", function() {
-        let anchorLink = document.querySelector(window.location.hash);
-      
         if (window.location.hash.length) {
             let anchorLink = document.querySelector(window.location.hash),
                 offsetSize = document.querySelector("header").offsetHeight, // or clientHeight
