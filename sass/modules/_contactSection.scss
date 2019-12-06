@@ -1,14 +1,14 @@
 // Sizes contact section
 #contactSection {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 // Adds space below contact h2
 #contactSection h2 {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 // Adds space below contact caption
@@ -99,5 +99,16 @@
     #contactForm input, #contactForm textArea {
         font-size: 10pt;
         line-height: 18pt;
+    }
+
+    // Sizes contact section
+    #contactSection {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    // Adds space below contact h2
+    #contactSection h2 {
+        margin-bottom: 60px;
     }
 }

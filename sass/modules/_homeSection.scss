@@ -32,8 +32,8 @@
 
 // Sizes, styles, and positions hero h3
 #homeSection h3 {
-    font-family: $heroFontTitle;
     font-size: 30pt;
+    font-weight: bold;
     letter-spacing: 0.2em;
     color: $brandWhite;
     margin-top: 55px;
@@ -42,7 +42,6 @@
 
 // Sizes, styles, and positions hero h4
 #homeSection h4 {
-    font-family: $heroFont;
     font-size: 12pt;
     letter-spacing: 0.2em;
     margin-top: 10px;
@@ -64,7 +63,7 @@
 }
 
 // Changes to desktop CSS
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     // Sizes, styles, and positions hero h3
     #homeSection h3 {
         font-size: 50pt;

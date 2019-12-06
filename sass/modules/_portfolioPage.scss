@@ -1,0 +1,71 @@
+// Spaces portfolio page
+#portfolioPage {
+    padding-top: 55px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+// Sizes and positions video container
+#videoContainer {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    transition: 0.25s ease-out;
+}
+
+// Sizes demo reel div and sets it up to be responsive
+#portfolioVideo {
+    padding-bottom:56.25%;
+    display:block;
+    width: 100%;
+    position:relative;
+}
+
+// Positions the demo reel within the div
+#portfolioVideo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#pieceName {
+    margin-bottom: 30px;
+    font-size: 15pt;
+    line-height: 20pt;
+    transition: 0.25s ease-out;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+#createdFor {
+    margin-bottom: 5px;
+}
+
+#portfolioDescription {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+#portfolioDescription p {
+    margin-bottom: 15px;
+}
+
+
+
+
+
+// Changes to desktop CSS
+@media screen and (min-width: 800px) {
+    // Sizes and positions video container
+    #videoContainer {
+        width: 60%;
+    }
+
+    #pieceName {
+        font-size: 20pt;
+        line-height: 25pt;
+    }
+}

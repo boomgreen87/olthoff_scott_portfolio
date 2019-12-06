@@ -1,0 +1,18 @@
+{{#each portfolio}}
+    <section id="portfolioPage">
+        {{!-- Portfolio video --}}
+        <div id="videoContainer"><div id="portfolioVideo">{{{video}}}</div></div>
+
+        {{!-- Name of portfolio piece --}}
+        <h2 id="pieceName">{{project_name}}</h2>
+
+        {{!-- Created for --}}
+        <div id="createdFor"><p><span class="boldText">Created For:</span> {{created_for}}</p></div>
+
+        {{!-- Programs used --}}
+        <div id="programsUsed"><p><span class="boldText">Programs Used:</span> {{programs_used}}</p></div>
+
+        {{!-- Description of project --}}
+        <div id="portfolioDescription">{{{description}}}</div>
+    </section> <!-- End portfolioPage -->
+{{/each}}

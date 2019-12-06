@@ -41,9 +41,76 @@ const myVM = (() => {
 
 
 
+
+
+    // BACK TO TOP RULES
+
+    // Menu button variables
+    var toTop = document.querySelector("#backToTop");
+
+    // Back to top function
+    function backToTop(e) {
+        e.preventDefault();
+        TweenMax.to(window, 1, {scrollTo:0});
+    }
+
+    // Back to top on user click
+    toTop.addEventListener("click", backToTop);
+
+
+
+
+
+    // WINDOW RESIZE RULES
+
+    // Window resize variables
+    let mobileMenu = document.querySelector("#menuContent"),
+        menuLinks = document.querySelectorAll("#mainNav ul li a"),
+        timer = 0;
+
+    // Stops the transitions on the menu
+    function stopTransition() {
+        mobileMenu.classList.add("stopTransition");
+        menuLinks.forEach(link => link.classList.add("stopTransition"));
+    }
+
+    // Starts the transitions on the menu
+    function startTransition() {
+        mobileMenu.classList.remove("stopTransition");
+        menuLinks.forEach(link => function() {
+            menuLinks.forEach(link => link.classList.remove("stopTransition"));
+        });
+    }
+
+    // Calls stopTransition intermittently instead of constantly while changing size of the window.
+    // Calls startTransition after timeout / when user stops resizing
+    function debounce() {
+        if (timer) {
+            clearTimeout(timer);
+            timer = null;
+        }
+        else
+            stopTransition();
+
+        timer = setTimeout(() => {
+            startTransition();
+            timer = null;
+        }, 500);
+    }
+
+    // Listens for window resize
+    window.addEventListener('resize', debounce);
+
+
+
+
+
+    // HOME PAGE RULES
+
     // SCROLL TO RULES
 
     let links = document.querySelectorAll(".menuBtn"),
+        pageTest = document.querySelector("#homeSection"),
         targetArea;
 
     // Scroll to function
@@ -60,23 +127,28 @@ const myVM = (() => {
     }
 
     // Adds event listeners to each menu button
-    for (var i=0; i < links.length; i++) {
-        links[i].addEventListener("click", scrollLink);
+    if(pageTest !== null) {
+        for (var i=0; i < links.length; i++) {
+            links[i].addEventListener("click", scrollLink);
+        }
     }
 
+    
 
 
-    // BACK TO TOP RULES
-
-    // Menu button variables
-    var toTop = document.querySelector("#backToTop");
-
-    // Back to top function
-    function backToTop(e) {
-        e.preventDefault();
-        TweenMax.to(window, 1, {scrollTo:0});
-    }
-
-    // Back to top on user click
-    toTop.addEventListener("click", backToTop);
+// Scrolls to offset when clicking on link on portfolio page
+    window.addEventListener("load", function() {
+        let anchorLink = document.querySelector(window.location.hash);
+      
+        if (window.location.hash.length) {
+            let anchorLink = document.querySelector(window.location.hash),
+                offsetSize = document.querySelector("header").offsetHeight, // or clientHeight
+                topTarget = anchorLink.offsetTop - offsetSize;
+      
+            window.scrollTo({
+                top: topTarget,
+                behavior: 'smooth'
+            });
+        }
+    });
 })();

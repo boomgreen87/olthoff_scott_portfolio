@@ -1,16 +1,18 @@
 // Sizes and styles about section
 #aboutSection {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
     color: $brandWhite;
     background-color: $brandBlack;
+    transition: 0.25s ease-out;
 }
 
 // Spaces about h2
 #aboutSection h2 {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    transition: 0.25s ease-out;
 }
 
 // Positions picture and lines
@@ -24,6 +26,7 @@
 .picLineArea {
     display: none;
     width: 100%;
+    transition: 0.25s ease-out;
 }
 
 // Sizes and styles lines
@@ -75,6 +78,17 @@
 
 // Changes to desktop CSS
 @media screen and (min-width: 1000px) {
+    // Sizes and styles about section
+    #aboutSection {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    // Spaces about h2
+    #aboutSection h2 {
+        margin-bottom: 60px;
+    }
+
     // Shows lines
     .picLineArea {
         display: flex;
