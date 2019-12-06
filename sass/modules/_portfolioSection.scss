@@ -1,19 +1,24 @@
+// Sets offset for when you click a link from a portfolio page
+#portfolioSectionOffset {
+    margin-top: -55px;
+}
+
 // Sizes portfolio section
 #portfolioSection {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 // Adds space below portfolio h2
 #portfolioSection h2 {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 // Adds space below portfolio caption
 #portfolioCaption {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 // Sizes demo reel div and sets it up to be responsive
@@ -29,4 +34,205 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+// Sizes and positions portfolio wrapper
+#portfolioWrapper {
+    width: 100%;
+    height: 350px;
+    margin-top: 30px;
+}
+
+// Sizes and sets up portfolio gallery
+#portfolioPieces {
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+// Aligns portfolio pieces
+.portfolioThumbnail {
+    background-color: $brandRed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-row: span 1;
+    grid-column: span 1;
+    position: relative;
+    overflow: hidden;
+}
+
+// Styles and positions project names
+.projectName {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 95%;
+    height: 95%;
+    background-color: $brandBlack;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5%;
+    transition: 0.25s ease-out;
+    color: white !important;
+    opacity: 0;
+}
+
+// Adds overlay to portfolio pieces on hover
+.portfolioThumbnail:hover {
+    .projectName {
+        top: 0;
+        opacity: 0.9;
+        cursor: pointer;
+    }
+}
+
+// Adds background images to portfolio pieces
+#piece2 {
+    background-image: url(/images/nike_shoe.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#piece3 {
+    background-image: url(/images/dancing_creature.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#piece4 {
+    background-image: url(/images/heads_up_display.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#piece5 {
+    background-image: url(/images/trapped.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#piece6 {
+    background-image: url(/images/sportsnet.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#piece7 {
+    background-image: url(/images/biohazard.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#piece8 {
+    background-image: url(/images/vulcan.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#piece9 {
+    background-image: url(/images/liquid_loop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+// Portfolio size changes
+@media screen and (min-width: 500px) {
+    #portfolioWrapper {
+        height: 600px;
+    }
+
+    // Sizes and sets up portfolio gallery
+    #portfolioPieces {
+        grid-gap: 15px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    #portfolioWrapper {
+        height: 800px;
+    }
+}
+
+
+
+
+
+
+
+// Changes to desktop CSS
+@media screen and (min-width: 1000px) {
+    // Sizes portfolio section
+    #portfolioSection {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    // Adds space below portfolio h2
+    #portfolioSection h2 {
+        margin-bottom: 60px;
+    }
+
+    // Adds space below portfolio caption
+    #portfolioCaption {
+        margin-bottom: 60px;
+    }
+
+    // Sizes and positions portfolio wrapper
+    #portfolioWrapper {
+        margin-top: 60px;
+    }
+
+    // Sizes and positions portfolio wrapper
+    #portfolioWrapper {
+        height: 800px;
+        margin-top: 60px;
+    }
+
+    // Sizes and sets up portfolio gallery
+    #portfolioPieces {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
+
+    // Aligns portfolio pieces
+    .portfolioThumbnail {
+        background-color: $brandRed;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // Sizes top and bottom rows of portfolio pieces
+    #piece2, #piece3, #piece4, #piece7, #piece8, #piece9 {
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+
+    // Sizes middle row of portfolio Pieces
+    #piece5, #piece6 {
+        grid-row: span 1;
+        grid-column: span 3;
+    }
+}
+
+
+
+
+
+// Portfolio size change
+@media screen and (min-width: 1400px) {
+    #portfolioWrapper {
+        height: 1000px;
+    }
 }

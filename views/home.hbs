@@ -24,10 +24,11 @@
 
 {{!-- Portfolio Section --}}
 <section id="portfolioSection">
+
     <h2>Portfolio</h2>
 
     {{!-- Portfolio Caption --}}
-    <p id="portfolioCaption" class="importantText">Check out below to see some work I created just for you! Okay, maybe not, but we can pretend right? If you like what you see, don’t be afraid to contact me through the contact form below! Maybe then I can really make something just for you!</p>
+    <p id="portfolioCaption" class="importantText">Check out below to see some work that I created just for you! Okay, maybe not, but we can pretend right? If you like what you see, don’t be afraid to contact me through the contact form below! Maybe then I can really make something just for you!</p>
 
     {{!-- DEMO REEL --}}
     <div id="demoReel">
@@ -35,9 +36,16 @@
     </div>
 
     {{!-- Portfolio Pieces --}}
-    <div id="portfolioPieces">
-        {{!-- TODO: ADD PORTFOLIO PIECES --}}
-    </div> <!-- End portfolioPieces -->
+    <div id="portfolioWrapper">
+        <div id="portfolioPieces">
+            {{#each portfolio}}
+                <div id="piece{{portfolio_id}}" class="portfolioThumbnail">
+                    <a href="portfolio/{{portfolio_id}}" class="projectName">{{project_name}}</a>
+                </div>
+            {{/each}}
+        </div> <!-- End portfolioPieces -->
+    </div> <!-- End portfolioWrapper -->
+    
 </section> <!-- End portfolioSection -->
 
 {{!-- About Section --}}

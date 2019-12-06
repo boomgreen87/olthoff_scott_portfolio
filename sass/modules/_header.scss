@@ -4,6 +4,7 @@
     position: fixed;
     width: 100%;
     z-index: 100;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
 }
 
 // Positions header content and styles header
@@ -92,6 +93,10 @@
     transition: 0.25s ease-out;
 }
 
+.stopTransition {
+    transition: none !important;
+}
+
 // Adds hovers to menu items for desktop users
 #mainNav ul li a:hover {
     color: $brandRed;
@@ -175,29 +180,19 @@
 
 
 
-// Changes header size
-@media screen and (min-width: 380px) {
-    // Sizes header
-    #headerCon{
-        padding-left: 10%;
-        padding-right: 10%;
-        width: 80%;
-    }
-}
 
 // Changes to desktop CSS
 @media screen and (min-width: 1000px) {
     // Styles header
     #mainHeader {
         height: 55px;
-        width: 80%;
-        padding-left: 10%;
-        padding-right: 10%;
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         background-color: $brandWhite;
-        box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
     }
 
     // Adjust headerCon for desktop
