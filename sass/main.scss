@@ -14,6 +14,65 @@
     display: none;
 }
 
+// Positions and sizes loading screen
+#loadingScreen {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $brandWhite;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// Icon animation
+@keyframes logoAnimate {
+    0% { transform: scale(1); }
+    40% { transform: scale(0.75); }
+    80% { transform: scale(1); }
+    100% { transform: scale(1);  }
+}
+
+// Sizes loading animation
+#loadingAnimation {
+    width: 200px;
+    text-transform: uppercase;
+}
+
+// Adds animation to the icon
+#logoIcon {
+    animation: logoAnimate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+// Adds space between icon and text on loading screen
+#loadingAnimation p {
+    margin-top: 10px;
+}
+
+// Fade out animation
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+// Fades out loading screen when page has loaded
+#loadingScreen.animateOut {
+    animation: 0.5s fadeOut;
+    animation-fill-mode: forwards;
+}
+
+// Closes loading screen when animation has completed
+#loadingScreen.closed {
+    display: none;
+}
+
 // Sizes, positions, and styles page
 body {
     text-align: center;
