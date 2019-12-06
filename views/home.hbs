@@ -50,91 +50,93 @@
 
 {{!-- About Section --}}
 <section id="aboutSection">
-    <h2>About</h2>
+    <div id="aboutContent">
+        <h2>About</h2>
 
-    {{!-- Pic area --}}
-    <div id="picArea">
-        {{!-- Left pic line --}}
-        <div class="picLineArea"><div class="picLine" id="picLineLeft"></div></div>
+        {{!-- Pic area --}}
+        <div id="picArea">
+            {{!-- Left pic line --}}
+            <div class="picLineArea"><div class="picLine" id="picLineLeft"></div></div>
 
-        {{!-- Picture of me --}}
-        <img src="images/scott.jpg" alt="Picture of Scott" id="scottPic">
+            {{!-- Picture of me --}}
+            <img src="images/scott.jpg" alt="Picture of Scott" id="scottPic">
 
-        {{!-- Right pic line --}}
-        <div class ="picLineArea"><div class="picLine" id="picLineRight"></div></div>
-    </div> <!-- End picArea -->
+            {{!-- Right pic line --}}
+            <div class ="picLineArea"><div class="picLine" id="picLineRight"></div></div>
+        </div> <!-- End picArea -->
 
-    {{!-- Social media links --}}
-    <div class="socialLinks" id="aboutSocialLinks">
-        {{!-- Facebook --}}
-        <a href="https://www.facebook.com/scotty.olthoff">
-            <svg class="aboutSocialIcon" id="aboutFacebookIcon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
-            <style type="text/css">
-                .st0{fill:#FFFFFF;}
-            </style>
-            <g id="Circle_Border_1_">
-                <path class="st0" d="M125,7c31.52,0,61.15,12.27,83.44,34.56S243,93.48,243,125s-12.27,61.15-34.56,83.44S156.52,243,125,243
-                    s-61.15-12.27-83.44-34.56S7,156.52,7,125s12.27-61.15,34.56-83.44S93.48,7,125,7 M125,0C55.96,0,0,55.96,0,125s55.96,125,125,125
-                    s125-55.96,125-125S194.04,0,125,0L125,0z"/>
-            </g>
-            <path id="Facebook_1_" class="st0" d="M136.05,101.13V89.07c0-1.81,0.08-3.21,0.25-4.2c0.17-0.99,0.55-1.97,1.15-2.93
-                c0.59-0.96,1.56-1.63,2.89-2c1.33-0.37,3.1-0.55,5.31-0.55h12.06V55.26h-19.28c-11.16,0-19.17,2.65-24.04,7.94
-                c-4.87,5.3-7.31,13.1-7.31,23.4v14.53H92.63v24.13h14.44v70h28.97v-70h19.28l2.55-24.13H136.05z"/>
-            </svg>
-        </a>
+        {{!-- Social media links --}}
+        <div class="socialLinks" id="aboutSocialLinks">
+            {{!-- Facebook --}}
+            <a href="https://www.facebook.com/scotty.olthoff">
+                <svg class="aboutSocialIcon" id="aboutFacebookIcon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                </style>
+                <g id="Circle_Border_1_">
+                    <path class="st0" d="M125,7c31.52,0,61.15,12.27,83.44,34.56S243,93.48,243,125s-12.27,61.15-34.56,83.44S156.52,243,125,243
+                        s-61.15-12.27-83.44-34.56S7,156.52,7,125s12.27-61.15,34.56-83.44S93.48,7,125,7 M125,0C55.96,0,0,55.96,0,125s55.96,125,125,125
+                        s125-55.96,125-125S194.04,0,125,0L125,0z"/>
+                </g>
+                <path id="Facebook_1_" class="st0" d="M136.05,101.13V89.07c0-1.81,0.08-3.21,0.25-4.2c0.17-0.99,0.55-1.97,1.15-2.93
+                    c0.59-0.96,1.56-1.63,2.89-2c1.33-0.37,3.1-0.55,5.31-0.55h12.06V55.26h-19.28c-11.16,0-19.17,2.65-24.04,7.94
+                    c-4.87,5.3-7.31,13.1-7.31,23.4v14.53H92.63v24.13h14.44v70h28.97v-70h19.28l2.55-24.13H136.05z"/>
+                </svg>
+            </a>
 
-        {{!-- LinkedIn --}}
-        <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BvqJogRS5QcmMFBSHiCspJg%3D%3D">
-            <svg class="aboutSocialIcon" id="aboutLinkedinIcon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
-            <style type="text/css">
-                .st0{fill:#FFFFFF;}
-            </style>
-            <g id="Circle_Border_1_">
-                <path class="st0" d="M125,7c31.52,0,61.15,12.27,83.44,34.56S243,93.48,243,125s-12.27,61.15-34.56,83.44S156.52,243,125,243
-                    s-61.15-12.27-83.44-34.56S7,156.52,7,125s12.27-61.15,34.56-83.44S93.48,7,125,7 M125,0C55.96,0,0,55.96,0,125s55.96,125,125,125
-                    s125-55.96,125-125S194.04,0,125,0L125,0z"/>
-            </g>
-            <path id="LinkedIn" class="st0" d="M195,140.12v51.77h-30.01v-48.3c0-12.13-4.33-20.41-15.2-20.41c-8.29,0-13.22,5.58-15.39,10.97
-                c-0.79,1.93-0.99,4.61-0.99,7.31v50.42h-30.02c0,0,0.4-81.8,0-90.27h30.02v12.79c-0.06,0.1-0.15,0.2-0.2,0.3h0.2v-0.3
-                c3.99-6.14,11.1-14.91,27.05-14.91C180.2,99.5,195,112.4,195,140.12L195,140.12z M71.98,58.11C61.72,58.11,55,64.85,55,73.7
-                c0,8.67,6.52,15.6,16.59,15.6h0.19c10.47,0,16.98-6.93,16.98-15.6C88.56,64.85,82.25,58.11,71.98,58.11L71.98,58.11z M56.78,191.89
-                h30v-90.27h-30V191.89z"/>
-            </svg>
-        </a>
+            {{!-- LinkedIn --}}
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BvqJogRS5QcmMFBSHiCspJg%3D%3D">
+                <svg class="aboutSocialIcon" id="aboutLinkedinIcon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                </style>
+                <g id="Circle_Border_1_">
+                    <path class="st0" d="M125,7c31.52,0,61.15,12.27,83.44,34.56S243,93.48,243,125s-12.27,61.15-34.56,83.44S156.52,243,125,243
+                        s-61.15-12.27-83.44-34.56S7,156.52,7,125s12.27-61.15,34.56-83.44S93.48,7,125,7 M125,0C55.96,0,0,55.96,0,125s55.96,125,125,125
+                        s125-55.96,125-125S194.04,0,125,0L125,0z"/>
+                </g>
+                <path id="LinkedIn" class="st0" d="M195,140.12v51.77h-30.01v-48.3c0-12.13-4.33-20.41-15.2-20.41c-8.29,0-13.22,5.58-15.39,10.97
+                    c-0.79,1.93-0.99,4.61-0.99,7.31v50.42h-30.02c0,0,0.4-81.8,0-90.27h30.02v12.79c-0.06,0.1-0.15,0.2-0.2,0.3h0.2v-0.3
+                    c3.99-6.14,11.1-14.91,27.05-14.91C180.2,99.5,195,112.4,195,140.12L195,140.12z M71.98,58.11C61.72,58.11,55,64.85,55,73.7
+                    c0,8.67,6.52,15.6,16.59,15.6h0.19c10.47,0,16.98-6.93,16.98-15.6C88.56,64.85,82.25,58.11,71.98,58.11L71.98,58.11z M56.78,191.89
+                    h30v-90.27h-30V191.89z"/>
+                </svg>
+            </a>
 
-        {{!-- YouTube --}}
-        <a href="https://www.youtube.com/channel/UCDP4QaAeURu11unE-IYOuBQ?">
-            <svg class="aboutSocialIcon" id="aboutYoutubeIcon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
-            <style type="text/css">
-                .st0{fill:#FFFFFF;}
-            </style>
-            <g id="Circle_Border_1_">
-                <path class="st0" d="M125,7c31.52,0,61.15,12.27,83.44,34.56S243,93.48,243,125s-12.27,61.15-34.56,83.44S156.52,243,125,243
-                    s-61.15-12.27-83.44-34.56S7,156.52,7,125s12.27-61.15,34.56-83.44S93.48,7,125,7 M125,0C55.96,0,0,55.96,0,125s55.96,125,125,125
-                    s125-55.96,125-125S194.04,0,125,0L125,0z"/>
-            </g>
-            <path id="YouTube_1_" class="st0" d="M201.69,86.43c-1.83-6.86-7.2-12.23-14.06-14.06C175.06,68.94,125,68.94,125,68.94
-                s-50.06,0-62.63,3.31c-6.74,1.83-12.23,7.43-14.06,14.29C45,99.11,45,125.06,45,125.06s0,26.06,3.31,38.51
-                c1.83,6.86,7.2,12.23,14.06,14.06c12.68,3.43,62.63,3.43,62.63,3.43s50.06,0,62.63-3.31c6.86-1.83,12.23-7.2,14.06-14.06
-                c3.31-12.57,3.31-38.51,3.31-38.51S205.11,98.89,201.69,86.43z M109,148.83v-48l41.6,24L109,148.83z"/>
-            </svg>
-        </a>
-    </div> <!-- End aboutSocialLinks -->
+            {{!-- YouTube --}}
+            <a href="https://www.youtube.com/channel/UCDP4QaAeURu11unE-IYOuBQ?">
+                <svg class="aboutSocialIcon" id="aboutYoutubeIcon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                </style>
+                <g id="Circle_Border_1_">
+                    <path class="st0" d="M125,7c31.52,0,61.15,12.27,83.44,34.56S243,93.48,243,125s-12.27,61.15-34.56,83.44S156.52,243,125,243
+                        s-61.15-12.27-83.44-34.56S7,156.52,7,125s12.27-61.15,34.56-83.44S93.48,7,125,7 M125,0C55.96,0,0,55.96,0,125s55.96,125,125,125
+                        s125-55.96,125-125S194.04,0,125,0L125,0z"/>
+                </g>
+                <path id="YouTube_1_" class="st0" d="M201.69,86.43c-1.83-6.86-7.2-12.23-14.06-14.06C175.06,68.94,125,68.94,125,68.94
+                    s-50.06,0-62.63,3.31c-6.74,1.83-12.23,7.43-14.06,14.29C45,99.11,45,125.06,45,125.06s0,26.06,3.31,38.51
+                    c1.83,6.86,7.2,12.23,14.06,14.06c12.68,3.43,62.63,3.43,62.63,3.43s50.06,0,62.63-3.31c6.86-1.83,12.23-7.2,14.06-14.06
+                    c3.31-12.57,3.31-38.51,3.31-38.51S205.11,98.89,201.69,86.43z M109,148.83v-48l41.6,24L109,148.83z"/>
+                </svg>
+            </a>
+        </div> <!-- End aboutSocialLinks -->
 
-    {{!-- About name --}}
-    <h3 id="aboutName">Scott Olthoff</h3>
+        {{!-- About name --}}
+        <h3 id="aboutName">Scott Olthoff</h3>
 
-    {{!-- About description --}}
-    <div id="aboutDescription" >
-        <p class="bodyText">My name is Scott Olthoff (just in case you didn’t see the big title above). I am a VFX artist and video editor from London, Ontario. I am currently in the Interactive Media Design program at Fanshawe College. When I graduate, I am planning to continue my studies in the Visual Effects and Editing program at Fanshawe to further develop my video skills. My goal is to take any video that is handed to me and make it extraordinary.</p>
+        {{!-- About description --}}
+        <div id="aboutDescription" >
+            <p class="bodyText">My name is Scott Olthoff (just in case you didn’t see the big title above). I am a VFX artist and video editor from London, Ontario. I am currently in the Interactive Media Design program at Fanshawe College. When I graduate, I am planning to continue my studies in the Visual Effects and Editing program at Fanshawe to further develop my video skills. My goal is to take any video that is handed to me and make it extraordinary.</p>
 
-        <p class="bodyText">I find video editing and visual effects absolutely fascinating. The stories that you can tell, the emotions you can evoke, the excitement you can create. The fact that we are able to seamlessly blend computer generated images with real footage is mind-boggling. </p>
+            <p class="bodyText">I find video editing and visual effects absolutely fascinating. The stories that you can tell, the emotions you can evoke, the excitement you can create. The fact that we are able to seamlessly blend computer generated images with real footage is mind-boggling. </p>
 
-        <p class="bodyText">My dream is to one day create films and/or music videos. To be able to help a story or song come to life would make my world. Music videos like A$AP Rocky’s “Kids Turned Out Fine” video, edited by Will Town with VFX by Mathematic, help to keep me inspired. I hope to one day create a video as visually mesmerizing as that one.</p>
-    </div> <!-- End aboutDescription -->
+            <p class="bodyText">My dream is to one day create films and/or music videos. To be able to help a story or song come to life would make my world. Music videos like A$AP Rocky’s “Kids Turned Out Fine” video, edited by Will Town with VFX by Mathematic, help to keep me inspired. I hope to one day create a video as visually mesmerizing as that one.</p>
+        </div> <!-- End aboutDescription -->
+    </div> <!-- End aboutContent -->
 </section> <!-- End aboutSection -->
 
 <section id="contactSection">

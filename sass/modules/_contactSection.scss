@@ -4,6 +4,13 @@
     padding-bottom: 30px;
     padding-left: 5%;
     padding-right: 5%;
+    opacity: 0;
+    transition: 1s ease-out;
+}
+
+// Fades contact section in at waypoint
+#contactSection.waypoint {
+    opacity: 1;
 }
 
 // Adds space below contact h2
@@ -21,7 +28,7 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -95,6 +102,11 @@
 
 // Changes to desktop CSS
 @media screen and (min-width: 1000px) {
+    // Sizes and positions contact form
+    #contactForm {
+        width: 80%;
+    }
+
     // Sizes and styles contact inputs
     #contactForm input, #contactForm textArea {
         font-size: 10pt;
