@@ -108,21 +108,68 @@ const myVM = (() => {
     // LOADING SCREEN RULES
 
     // Loading screen variables
-    let loadingScreen = document.querySelector("#loadingScreen");
+    let loadingScreen = document.querySelector("#loadingScreen"),
+        body = document.querySelector("body");
 
     // Adds closing class
     function addClose() {
         loadingScreen.classList.add("closed");
     }
 
+    function enableScrolling() {
+        body.classList.add("loaded");
+    }
+
     // Close loader function
     function closeLoader() {
         loadingScreen.classList.add("animateOut");
         setTimeout(addClose, 500);
+        setTimeout(enableScrolling, 300);
     }
 
     // Closes loader when page has loaded
     window.addEventListener("load", closeLoader);
+
+
+
+
+
+    // WAYPOINT RULES
+
+    // Section variables
+    let portfolioSection = document.querySelector("#portfolioSection"),
+        aboutSection = document.querySelector("#aboutContent"),
+        contactSection = document.querySelector("#contactSection");
+
+    // Portfolio section waypoint
+    let waypoint1 = new Waypoint({
+        element: portfolioSection,
+        handler: function(direction) {
+            portfolioSection.classList.add("waypoint");
+        },
+
+        offset: 400
+    })
+
+    // About section waypoint
+    let waypoint2 = new Waypoint({
+        element: aboutSection,
+        handler: function(direction) {
+            aboutSection.classList.add("waypoint");
+        },
+
+        offset: 400
+    })
+
+    // Contact section waypoint
+    let waypoint3 = new Waypoint({
+        element: contactSection,
+        handler: function(direction) {
+            contactSection.classList.add("waypoint");
+        },
+
+        offset: 400
+    })
 
 
 

@@ -9,6 +9,17 @@
     transition: 0.25s ease-out;
 }
 
+// Hides about section until waypoint is hit
+#aboutContent {
+    opacity: 0;
+    transition: 1s ease-out;
+}
+
+// Fades about section in at waypoint
+#aboutContent.waypoint {
+    opacity: 1;
+}
+
 // Spaces about h2
 #aboutSection h2 {
     margin-bottom: 30px;

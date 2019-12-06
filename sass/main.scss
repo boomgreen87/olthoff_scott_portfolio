@@ -81,6 +81,14 @@ body {
     line-height: 18pt;
     font-size: 11pt;
     transition: 0.25 ease-out;
+    height: 100%;
+    overflow: hidden;
+}
+
+// Enables scrolling when page has loaded
+body.loaded {
+    height: auto;
+    overflow: auto;
 }
 
 // Styles h2s
