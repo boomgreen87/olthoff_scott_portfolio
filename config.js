@@ -4,6 +4,12 @@ const config = {
     uname: "ba293c82b79954",
     pword: "054bea07", 
     database: "heroku_f9c4e3f7f05a77b"
+
+    // host: "localhost",
+    // port: 3306, // 8889 for mac
+    // uname: "root",
+    // pword: "", 
+    // database: "db_portfolio"
 }
 
 module.exports = config;

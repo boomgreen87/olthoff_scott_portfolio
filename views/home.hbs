@@ -144,27 +144,28 @@
 
     <p id="contactCaption" class="importantText">Please fill out the form below to contact me. I need a better answer for when my parents ask me who I am talking to!</p>
 
-    <div id="contactForm">
+    <form id="contactForm" method="POST" action="contact">
         <!-- Name -->
         <label for="firstName">Name</label>
         <div id="contactNameInput">
-            <input id="firstName" type="text" placeholder="First Name" required>
-            <input id="lastName" type="text" placeholder="Last Name" required>
+            <input id="firstName" type="text" placeholder="First Name" name="firstName" required>
+            <input id="lastName" type="text" placeholder="Last Name" name="lastName" required>
         </div> <!-- End contactName -->
 
 		<!-- Email -->
 		<label for="email">Email</label>
-		<input id="email" type="Email" placeholder="creative_example@gmail.com" required>
+		<input id="email" type="Email" placeholder="creative_example@gmail.com" name="email" required>
 
         <!-- Subject -->
 		<label for="subject">Subject</label>
-		<input id="subject" type="text" placeholder="I'd love to work with you!" required>
+		<input id="subject" type="text" placeholder="I'd love to work with you!" name="subject" required>
 
 		<!-- Message -->
 		<label for="message">Message</label>
-		<textarea id="message" cols="50" rows="14" placeholder="I think you know what to do here." required></textarea>
+		<textarea id="message" cols="50" rows="14" placeholder="I think you know what to do here." name="message" required></textarea>
 
 		<!-- Submit Button -->
-		<input class="submit" type="submit" value="Submit">
-	</div> <!-- End contactForm -->
+		<input class="submit" type="submit" value="Submit" name="submit">
+        <p>{{msg}}</p>
+	</form> <!-- End contactForm -->
 </section> <!-- End contactSection -->
