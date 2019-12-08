@@ -116,6 +116,7 @@ const myVM = (() => {
         loadingScreen.classList.add("closed");
     }
 
+    // Enables scrolling when page is loaded
     function enableScrolling() {
         body.classList.add("loaded");
     }
@@ -129,47 +130,6 @@ const myVM = (() => {
 
     // Closes loader when page has loaded
     window.addEventListener("load", closeLoader);
-
-
-
-
-
-    // WAYPOINT RULES
-
-    // Section variables
-    let portfolioSection = document.querySelector("#portfolioSection"),
-        aboutSection = document.querySelector("#aboutContent"),
-        contactSection = document.querySelector("#contactSection");
-
-    // Portfolio section waypoint
-    let waypoint1 = new Waypoint({
-        element: portfolioSection,
-        handler: function(direction) {
-            portfolioSection.classList.add("waypoint");
-        },
-
-        offset: 400
-    })
-
-    // About section waypoint
-    let waypoint2 = new Waypoint({
-        element: aboutSection,
-        handler: function(direction) {
-            aboutSection.classList.add("waypoint");
-        },
-
-        offset: 400
-    })
-
-    // Contact section waypoint
-    let waypoint3 = new Waypoint({
-        element: contactSection,
-        handler: function(direction) {
-            contactSection.classList.add("waypoint");
-        },
-
-        offset: 400
-    })
 
 
 
@@ -203,10 +163,7 @@ const myVM = (() => {
         }
     }
 
-    
-
-
-// Scrolls to offset when clicking on link on portfolio page
+    // Scrolls to offset when clicking on link on portfolio page
     window.addEventListener("load", function() {
         if (window.location.hash.length) {
             let anchorLink = document.querySelector(window.location.hash),
@@ -219,4 +176,47 @@ const myVM = (() => {
             });
         }
     });
+
+
+
+
+
+    // WAYPOINT RULES
+
+    if(pageTest !== null) {
+        // Section variables
+        let portfolioSection = document.querySelector("#portfolioSection"),
+            aboutSection = document.querySelector("#aboutContent"),
+            contactSection = document.querySelector("#contactSection");
+
+        // Portfolio section waypoint
+        let waypoint1 = new Waypoint({
+            element: portfolioSection,
+            handler: function(direction) {
+                portfolioSection.classList.add("waypoint");
+            },
+
+            offset: 400
+        })
+
+        // About section waypoint
+        let waypoint2 = new Waypoint({
+            element: aboutSection,
+            handler: function(direction) {
+                aboutSection.classList.add("waypoint");
+            },
+
+            offset: 400
+        })
+
+        // Contact section waypoint
+        let waypoint3 = new Waypoint({
+            element: contactSection,
+            handler: function(direction) {
+                contactSection.classList.add("waypoint");
+            },
+
+            offset: 400
+        })
+    }   
 })();

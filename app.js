@@ -21,58 +21,36 @@ app.use(bodyParser.json());
 // Sends email when contact form is submitted
 app.post('/contact', (req, res) => {
 
-    // // Instantiate the SMTP server
-    // const smtpTrans = nodemailer.createTransport({
-    //     host: 'smtp.gmail.com',
-    //     port: 465,
-    //     secure: true,
-    //     auth: {
-    //     user: "contactscottolthoff@gmail.com",
-    //     pass: "mightyducks93"
-    //     }
-    // })
-  
-    // // Specify what the email will look like
-    // const mailOutput = {
-    //     from: "noreply@scottolthoff.ca", // This is ignored by Gmail
-    //     to: "scottolthoff@yahoo.com",
-    //     subject: 'New Message From scottolthoff.ca',
-    //     text: `Message From: ${req.body.firstName} ${req.body.lastName} (${req.body.email})\nSubject: ${req.body.subject}\n${req.body.message}`
-    // }
-  
-    // // Attempt to send the email
-    // smtpTrans.sendMail(mailOutput, (error, response) => {
-    //     if (error) {
-    //     console.log(error);
-    //     res.render("home", {msg: "Error"});
-    //     }
-    //     else {
-    //     console.log(mailOutput);
-    //     res.render("home", {msg: "Message was sent!"});
-    //     }
-    // })
-
-    var transporter = nodemailer.createTransport({
-        service: 'gmail',
+    // Instantiate the SMTP server
+    const smtpTrans = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
         auth: {
-               user: 'contactscottolthoff@gmail.com',
-               pass: 'mightyducks93'
-           }
-    });
-
-    const mailOptions = {
-        from: 'noreply@scottolthoff.ca', // sender address
-        to: 'scottolthoff@yahoo.com', // list of receivers
-        subject: `${req.body.subject}`, // Subject line
-        html: `${req.body.message}`// plain text body
-    };
-
-    transporter.sendMail(mailOptions, function (err, info) {
-        if(err)
-            res.send({msg: "Error"});
-        else
-            res.send({msg: "Message was sent!"});
-    });
+        user: "contactscottolthoff@gmail.com",
+        pass: "mightyducks93"
+        }
+    })
+  
+    // Specify what the email will look like
+    const mailOutput = {
+        from: "noreply@scottolthoff.ca", // This is ignored by Gmail
+        to: "scottolthoff@yahoo.com",
+        subject: 'New Message From scottolthoff.ca',
+        text: `Message From: ${req.body.firstName} ${req.body.lastName} (${req.body.email})\nSubject: ${req.body.subject}\n\n${req.body.message}`
+    }
+  
+    // Attempt to send the email
+    smtpTrans.sendMail(mailOutput, (error, response) => {
+        if (error) {
+            console.log(error);
+            res.render("contact", { msg: "Whoops! Something went wrong and your message wasn't delivered." });
+        }
+        else {
+            console.log(mailOutput);
+            res.render("contact", { img: `<img src="/images/pigeon.svg" alt="Pigeon" id="pigeon">`, msg: "The carrier pigeon is on its way!" });
+        }
+    })
 })
 
 app.use((req, res, next) => {
