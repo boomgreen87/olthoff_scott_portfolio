@@ -28,7 +28,7 @@ app.post('/contact', (req, res) => {
         secure: true,
         auth: {
         user: "contactscottolthoff@gmail.com",
-        pass: "mightyducks93"
+        pass: "Notpassword1!"
         }
     })
   
