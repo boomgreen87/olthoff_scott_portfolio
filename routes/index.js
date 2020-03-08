@@ -4,7 +4,7 @@ const router = express.Router();
 const sql = require('../utils/sql');
 
 router.get('/', (req, res) => {
-    connect.getConnection((err, connection) => {
+    sql.getConnection((err, connection) => {
         if (err) { return console.log(err.message); }
         console.log('At the main route');
 
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/portfolio/:id', (req, res) => {
-    connect.getConnection((err, connection) => {
+    sql.getConnection((err, connection) => {
         if (err) { return console.log(err.message); }
         console.log(req.params.id);
 
