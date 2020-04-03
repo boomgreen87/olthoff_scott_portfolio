@@ -159,7 +159,10 @@ const myVM = (() => {
     // Adds event listeners to each menu button
     if(pageTest !== null) {
         for (var i=0; i < links.length; i++) {
-            links[i].addEventListener("click", scrollLink);
+            if(links[i].id !== 'resumeBtn') {
+                console.log(links[i].id);
+                links[i].addEventListener("click", scrollLink);
+            }
         }
     }
 
