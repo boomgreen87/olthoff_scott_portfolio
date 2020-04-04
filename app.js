@@ -27,8 +27,8 @@ app.post('/contact', (req, res) => {
         port: 465,
         secure: true,
         auth: {
-        user: "contactscottolthoff@gmail.com",
-        pass: "Notpassword1!"
+            user: "contactscottolthoff@gmail.com",
+            pass: "Notpassword1!"
         }
     })
   

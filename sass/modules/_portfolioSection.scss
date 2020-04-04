@@ -54,7 +54,7 @@
 #portfolioPieces {
     display: grid;
     height: 100%;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 }
@@ -148,13 +148,45 @@
     background-position: center;
 }
 
+#piece10 {
+    background-image: url(/images/dugout.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#piece11 {
+    background-image: url(/images/brisk.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+// Portfolio size changes
+@media screen and (min-width: 320px) {
+    #portfolioWrapper {
+        height: 500px;
+    }
+}
+
+
+
+
+// Portfolio size changes
+@media screen and (min-width: 400px) {
+    #portfolioWrapper {
+        height: 550px;
+    }
+}
+
 
 
 
 // Portfolio size changes
 @media screen and (min-width: 500px) {
     #portfolioWrapper {
-        height: 600px;
+        height: 700px;
     }
 
     // Sizes and sets up portfolio gallery
@@ -163,14 +195,36 @@
     }
 }
 
-@media screen and (min-width: 750px) {
+
+
+
+// Portfolio size changes
+@media screen and (min-width: 600px) {
     #portfolioWrapper {
-        height: 800px;
+        height: 850px;
     }
 }
 
 
 
+
+
+// Portfolio size changes
+@media screen and (min-width: 720px) {
+    #portfolioWrapper {
+        height: 1000px;
+    }
+}
+
+
+
+
+// Portfolio size changes
+@media screen and (min-width: 900px) {
+    #portfolioWrapper {
+        height: 1200px;
+    }
+}
 
 
 
@@ -200,13 +254,13 @@
 
     // Sizes and positions portfolio wrapper
     #portfolioWrapper {
-        height: 800px;
+        height: 1100px;
         margin-top: 60px;
     }
 
     // Sizes and sets up portfolio gallery
     #portfolioPieces {
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(10, 1fr);
         grid-template-columns: repeat(6, 1fr);
         grid-gap: 20px;
     }
@@ -222,13 +276,13 @@
 
     // Sizes top and bottom rows of portfolio pieces
     #piece2, #piece3, #piece4, #piece7, #piece8, #piece9 {
-        grid-row: span 1;
+        grid-row: span 2;
         grid-column: span 2;
     }
 
     // Sizes middle row of portfolio Pieces
-    #piece5, #piece6 {
-        grid-row: span 1;
+    #piece5, #piece6, #piece10, #piece11 {
+        grid-row: span 3;
         grid-column: span 3;
     }
 }
@@ -240,6 +294,6 @@
 // Portfolio size change
 @media screen and (min-width: 1400px) {
     #portfolioWrapper {
-        height: 1000px;
+        height: 1300px;
     }
 }

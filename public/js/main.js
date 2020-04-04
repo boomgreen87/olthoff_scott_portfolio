@@ -160,7 +160,6 @@ const myVM = (() => {
     if(pageTest !== null) {
         for (var i=0; i < links.length; i++) {
             if(links[i].id !== 'resumeBtn') {
-                console.log(links[i].id);
                 links[i].addEventListener("click", scrollLink);
             }
         }
