@@ -281,9 +281,14 @@
     }
 
     // Sizes middle row of portfolio Pieces
-    #piece5, #piece6, #piece10, #piece11 {
+    #piece5, #piece6, #piece11, #piece21 {
         grid-row: span 3;
         grid-column: span 3;
+    }
+
+    // Moves these pieces to top of grid
+    #piece11, #piece21 {
+        order: -100;
     }
 }
 
